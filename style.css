@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+}
+
+html {
+    --black: rgb(25, 25, 25);
+    --orange: rgb(211, 97, 53);
+    --grey: rgb(194, 193, 165);
+    --white: rgb(255, 255, 255);
+    --blue: rgb(102, 199, 244);
+    --purple: rgb(108, 110, 160);
+    --purple-dark: rgb(58, 60, 121);
+    background-color: var(--black);
+}
+
+.container {
+    width: 400px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--orange);
+    margin-bottom: 8px;
+}
+
+.logo {
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--orange);
+    flex: 1;
+    text-align: center;
+}
+
+#toggle-button {
+    background-color: var(--black);
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 80px;
+    margin-left: auto;
+    transition: all 0.2s;
+}
+
+#toggle-button:hover {
+    transform: scale(1.1);
+}
+
+.toggle-button-on {
+    color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.toggle-button-on:hover {
+    background-color: var(--orange) !important;
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.toggle-button-off {
+    color: var(--purple);
+    border: 1px solid var(--purple);
+}
+
+.toggle-button-off:hover {
+    background-color: var(--purple) !important;
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+#blocked-list {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.blocked-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.blocked-url {
+    font-weight: 600;
+    font-size: 14px;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--white);
+}
+
+.remove-button {
+    outline: none;
+    border:1px solid var(--orange);
+    color: var(--orange);
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: all 0.2s;
+    width: 80px;
+}
+
+.remove-button:hover {
+    transform: scale(1.1);
+}
+
+.input-container {
+    margin-top: 16px;
+    display: flex;
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+#url-input {
+    padding: 0 8px;
+    flex: 1;
+    border: 1px solid var(--orange);
+    background: var(--black);
+    outline: none;
+    color: var(--orange);
+    border-radius: 8px 0 0 8px;
+    height: 32px;
+    font-size: 16px;
+    transition: all 0.2s;
+    border-right: none;
+}
+
+#block-button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.2s;
+    padding: 0 16px;
+    border-radius: 0 8px 8px 0;
+    width: 80px;
+}
+
+#block-button:hover {
+    width: 90px;
+}
